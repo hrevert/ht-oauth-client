@@ -1,0 +1,25 @@
+{
+    "name": "hrevert/ht-oauth-client",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hrevert Technologies",
+            "email": "info@hrevert.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "doctrine/common": "~2.1"
+    },
+    "suggest": {
+        "doctrine/common": "To use the doctrine manager provided by this library"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hrevert\OauthClient\\": "src/"
+        }
+    }
+}
