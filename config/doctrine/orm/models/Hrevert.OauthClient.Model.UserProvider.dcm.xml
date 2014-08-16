@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doctrine-mapping
+        xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+    http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <mapped-superclass name="Hrevert\OauthClient\Model\UserProvider">
+        <many-to-one field="user" target-entity="Hrevert\OauthClient\Model\UserInterface" fetch="EAGER">
+            <join-column name="user_id" referenced-column-name="id"  on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one field="provider" target-entity="Hrevert\OauthClient\Model\Provider" fetch="EAGER">
+            <join-column name="provider_id" referenced-column-name="id"  on-delete="CASCADE" />
+        </many-to-one>
+        <field name="providerUid" column="provider_uid" type="string" length="255" nullable="false"/>
+        <id name="user" association-key="true" />
+        <id name="provider" association-key="true" />
+    </mapped-superclass>
+</doctrine-mapping>
