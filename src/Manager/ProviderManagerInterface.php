@@ -8,7 +8,7 @@ interface ProviderManagerInterface
     /**
      * Finds provider by name
      *
-     * @return ProviderInterface
+     * @return null|ProviderInterface
      */
     public function findByName($name);
 }

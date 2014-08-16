@@ -12,7 +12,7 @@ interface UserProviderManagerInterface
      *
      * @param string $providerUid
      * @param ProviderInterface $provider
-     * @return UserProviderInterface
+     * @return null|UserProviderInterface
      */
     public function findByProviderUid($providerUid, ProviderInterface $provider);
 
@@ -21,7 +21,7 @@ interface UserProviderManagerInterface
      *
      * @param UserInterface $user
      * @param ProviderInterface $provider
-     * @return UserProviderInterface
+     * @return null|UserProviderInterface
      */
     public function findByUserAndProvider(UserInterface $user, ProviderInterface $provider);
 
