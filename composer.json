@@ -1,6 +1,8 @@
 {
     "name": "hrevert/ht-oauth-client",
+    "description": "his library provides some models and entities to implement oauth client. This library does not provide any oauth client.",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Hrevert Technologies",
@@ -19,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hrevert\OauthClient\\": "src/"
+            "Hrevert\\OauthClient\\": "src/"
         }
     }
 }
