@@ -26,6 +26,6 @@ class ProviderManager implements ProviderManagerInterface
      */    
     public function findByName($name)
     {
-        return $this->repository->findOneBy(['name' => $name);
+        return $this->repository->findOneBy(['name' => $name]);
     }    
 }
