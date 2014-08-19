@@ -1,6 +1,9 @@
 <?php
 namespace Hrevert\OauthClient\Model;
 
+/**
+ *  Represents a link of a user and a provider
+ */
 interface UserProviderInterface
 {
     /**
