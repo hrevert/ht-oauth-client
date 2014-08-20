@@ -9,7 +9,7 @@ interface UserProviderInterface
     /**
      * Sets user
      *
-     * @param UserInterface $user
+     * @param  UserInterface $user
      * @return self
      */
     public function setUser(UserInterface $user);
@@ -17,14 +17,14 @@ interface UserProviderInterface
     /**
      * Gets user
      *
-     * @return UserInterface 
+     * @return UserInterface
      */
     public function getUser();
 
     /**
      * Sets provider
      *
-     * @param ProviderInterface $provider
+     * @param  ProviderInterface $provider
      * @return self
      */
     public function setProvider(ProviderInterface $provider);
@@ -32,14 +32,14 @@ interface UserProviderInterface
     /**
      * Gets provider
      *
-     * @return ProviderInterface 
+     * @return ProviderInterface
      */
     public function getProvider();
 
     /**
      * Sets provider user id
      *
-     * @param string $providerUid
+     * @param  string $providerUid
      * @return self
      */
     public function setProviderUid($providerUid);
@@ -47,7 +47,7 @@ interface UserProviderInterface
     /**
      * Gets providerUid
      *
-     * @return string 
+     * @return string
      */
     public function getProviderUid();
 }

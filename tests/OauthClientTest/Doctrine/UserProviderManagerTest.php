@@ -53,7 +53,7 @@ class UserProviderManagerTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue($userProvider));
 
         $this->assertEquals($userProvider, $userProviderManager->findByUserAndProvider($user, $provider));
-                
+
     }
 
     public function testFindByUser()
@@ -69,7 +69,7 @@ class UserProviderManagerTest extends \PHPUnit_Framework_TestCase
         $userProviderManager = new UserProviderManager($objectManager, $class);
 
         $userProvider = $this->getMock('Hrevert\OauthClient\Model\UserProvider');
-        $userProviders = [new UserProvider, $userProvider];
+        $userProviders = [new UserProvider, $userProvider]();
         $user = $this->getMock('Hrevert\OauthClient\Model\UserInterface');
 
         $repository->expects($this->once())
@@ -78,25 +78,25 @@ class UserProviderManagerTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue($userProviders));
 
         $this->assertEquals($userProviders, $userProviderManager->findByUser($user));
-                
+
     }
 
     public function testInsert()
     {
         $objectManager = $this->getMock('Doctrine\Common\Persistence\ObjectManager');
-        $class = 'Hrevert\OauthClient\Model\UserProvider';  
-        
+        $class = 'Hrevert\OauthClient\Model\UserProvider';
+
         $userProviderManager = new UserProviderManager($objectManager, $class);
-        
-        $userProvider = $this->getMock('Hrevert\OauthClient\Model\UserProvider'); 
+
+        $userProvider = $this->getMock('Hrevert\OauthClient\Model\UserProvider');
 
         $objectManager->expects($this->once())
             ->method('persist')
-            ->with($userProvider); 
-            
+            ->with($userProvider);
+
         $objectManager->expects($this->once())
             ->method('flush');
-            
-        $userProviderManager->insert($userProvider);                     
+
+        $userProviderManager->insert($userProvider);
     }
 }

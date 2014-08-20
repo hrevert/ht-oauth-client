@@ -7,7 +7,7 @@ class ProviderManagerTest extends \PHPUnit_Framework_TestCase
 {
     public function testFindByName()
     {
-        $provider = $this->getMock('Hrevert\OauthClient\Model\ProviderInterface'); 
+        $provider = $this->getMock('Hrevert\OauthClient\Model\ProviderInterface');
 
         $repository = $this->getMock('Doctrine\Common\Persistence\ObjectRepository');
         $repository->expects($this->at(0))

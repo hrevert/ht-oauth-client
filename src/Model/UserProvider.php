@@ -43,7 +43,7 @@ class UserProvider implements UserProviderInterface
     {
         $this->provider = $provider;
 
-        return $this;        
+        return $this;
     }
 
     /**
@@ -61,7 +61,7 @@ class UserProvider implements UserProviderInterface
     {
         $this->providerUid = $providerUid;
 
-        return $this;          
+        return $this;
     }
 
     /**

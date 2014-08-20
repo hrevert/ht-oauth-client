@@ -9,8 +9,8 @@ class ProviderManager implements ProviderManagerInterface
     /**
      * @var ObjectRepository
      */
-    protected $repository; 
-    
+    protected $repository;
+
     /**
      * Constructor
      *
@@ -23,9 +23,9 @@ class ProviderManager implements ProviderManagerInterface
 
     /**
      * {@inheritDoc}
-     */    
+     */
     public function findByName($name)
     {
         return $this->repository->findOneBy(['name' => $name]);
-    }    
+    }
 }

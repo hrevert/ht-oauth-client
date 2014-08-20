@@ -24,7 +24,7 @@ class UserProviderManager implements UserProviderManagerInterface
      * Constructor
      *
      * @param ObjectManager $objectManager
-     * @param string $class
+     * @param string        $class
      */
     public function __construct(ObjectManager $objectManager, $class)
     {
