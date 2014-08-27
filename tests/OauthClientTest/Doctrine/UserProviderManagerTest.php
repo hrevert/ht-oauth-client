@@ -69,7 +69,7 @@ class UserProviderManagerTest extends \PHPUnit_Framework_TestCase
         $userProviderManager = new UserProviderManager($objectManager, $class);
 
         $userProvider = $this->getMock('Hrevert\OauthClient\Model\UserProvider');
-        $userProviders = [new UserProvider, $userProvider]();
+        $userProviders = [new UserProvider, $userProvider];
         $user = $this->getMock('Hrevert\OauthClient\Model\UserInterface');
 
         $repository->expects($this->once())

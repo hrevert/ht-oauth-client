@@ -31,6 +31,19 @@ class Provider implements ProviderInterface
     }
 
     /**
+     * Sets Provider name
+     *
+     * @param string $name
+     * @return self
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getName()
