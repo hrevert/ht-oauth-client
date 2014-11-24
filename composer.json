@@ -15,10 +15,12 @@
     "require-dev": {
         "phpunit/phpunit": "4.*",
         "phine/test" : "1.*",
-        "doctrine/common": "~2.1"
+        "doctrine/common": "~2.1",
+        "zf-commons/zfc-base": "0.1.*"
     },
     "suggest": {
-        "doctrine/common": "To use the doctrine manager provided by this library"
+        "doctrine/common": "To use the doctrine manager provided by this library",
+        "zf-commons/zfc-base": "To use this library with Zend\\Db"
     },
     "autoload": {
         "psr-4": {
