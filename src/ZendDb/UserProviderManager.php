@@ -113,7 +113,7 @@ class UserProviderManager extends AbstractDbMapper implements UserProviderManage
      */
     protected function createUserProvider(UserInterface $user, ProviderInterface $provider, $providerUid)
     {
-        $userProvider = new UserProvider;
+        $userProvider = clone $this->getEntityPrototype();
         $userProvider->setUser($user);
         $userProvider->setProvider($provider);
         $userProvider->setProviderUid($providerUid);
